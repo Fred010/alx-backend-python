@@ -20,7 +20,7 @@ def safely_get_value(
         default (Union[T, None]): default value
 
     Returns:
-        val (Union[Any, T]): values
+        Union[Any, T]: values
     """
     if key in dct:
         return dct[key]
