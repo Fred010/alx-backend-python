@@ -1,18 +1,17 @@
-#!usr/bin/env python3
-"""
-Add two numbers and returns their sum as a float.
+#!/usr/bin/env python3
+""" Add two floats and returns their sum
 """
 
 
 def add(a: float, b: float) -> float:
     """
-    Adds 2 floats and returns their sum as a float.
+    Adds two floats and returns their sum.
 
     Args:
-    a (float): first input of type float
-    b (float): second input of type float
+        a (float): The first number to be added.
+        b (float): The second number to be added.
 
     Returns:
-    float: The sum of a and b
+        float: The sum of the two input numbers.
     """
     return a + b
