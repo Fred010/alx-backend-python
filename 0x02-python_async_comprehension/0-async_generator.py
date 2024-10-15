@@ -1,23 +1,15 @@
 #!/usr/bin/env python3
-""" Async Comprehensions
-"""
+''' Coroutine called async_generator that takes no arguments.
+'''
 
-from asyncio import sleep
-from random import uniform
-from typing import AsyncGenerator
+import asyncio
+import random
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
-    """
-    Async Generator that yields random numbers
-    between 0 and 10 after a 1 second
-    delay.
-
-    Yields:
-        float: A random number between 0 and 10.
-    """
+async def async_generator() -> Generator[float, None, None]:
+    '''Generates a sequence of 10 numbers.
+    '''
     for _ in range(10):
-        # Wait for 1 second before yielding a random number
-        await sleep(1)
-        # Generate a random number between 0 and 10
-        yield uniform(0, 10)
+        await asyncio.sleep(1)
+        yield random.random() * 10
