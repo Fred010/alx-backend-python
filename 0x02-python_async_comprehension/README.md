@@ -12,7 +12,7 @@ The general syntax for an async comprehension is:
 * generator expression: (i ** 2 async for i in agen()).
 
 ### Example
-``
+```
 import asyncio
 
 async def fetch_data(url):
